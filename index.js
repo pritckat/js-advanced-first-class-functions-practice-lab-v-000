@@ -11,8 +11,6 @@ const nameSorter = function (d1, d2) {
   return d1.name.localeCompare(d2.name);
 }
 
-const revenueCollector = (agg, total) => agg.revenue + total;
-
 function logDriverNames(drivers) {
   return drivers.forEach(callback);
 }
@@ -32,6 +30,12 @@ function driversByName(drivers) {
   return copyOfDrivers.sort(nameSorter);
 }
 
-function totalRevenue (drivers) {
-  return drivers.reduce(revenueCollector)
+const totalRevenue = function (drivers) {
+  return drivers.reduce(function (total, driver) {
+    return driver.revenue + total;
+  }, 0);
+}
+
+const averageRevenue = function(drivers) {
+  return totalRevenue(drivers)/ drivers.length;
 }
