@@ -78,13 +78,13 @@ describe('index.js', function () {
       expect(driversByName(drivers)[drivers.length - 1].name).to.eql('Sammy');
     });
   });
-  
+
   describe('totalRevenue()', function () {
     it('uses the reduce() method to sum the revenue of every driver and return the total', function () {
       expect(totalRevenue(drivers)).to.equal(18500);
     });
   });
-  
+
   describe('averageRevenue()', function () {
     it('calculates the average revenue across all drivers', function () {
       expect(averageRevenue(drivers)).to.equal(3700);
