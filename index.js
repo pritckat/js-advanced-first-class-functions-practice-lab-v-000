@@ -30,6 +30,8 @@ function driversByName(drivers) {
   return copyOfDrivers.sort(nameSorter);
 }
 
-function totalRevenue (drivers) {
-  return drivers.reduce(revenueCollector)
+const totalRevenud = function (drivers) {
+  return drivers.reduce(function (total, driver) {
+    return driver.revenue + total;
+  }, 0);
 }
