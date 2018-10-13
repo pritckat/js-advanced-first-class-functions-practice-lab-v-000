@@ -62,7 +62,7 @@ describe('index.js', function () {
       expect(spy.calledWithExactly('Annette')).to.not.be.true;
     });
   });
-  
+
   describe('driversByRevenue()', function () {
     it('uses the sort() method to return a new array of drivers ordered by revenue (lowest to highest)', function () {
       expect(driversByRevenue(drivers)[0].name).to.eql('Sally');
@@ -78,16 +78,16 @@ describe('index.js', function () {
       expect(driversByName(drivers)[drivers.length - 1].name).to.eql('Sammy');
     });
   });
-
-  describe('totalRevenue()', function () {
-    it('uses the reduce() method to sum the revenue of every driver and return the total', function () {
-      expect(totalRevenue(drivers)).to.equal(18500);
-    });
-  });
-
-  describe('averageRevenue()', function () {
-    it('calculates the average revenue across all drivers', function () {
-      expect(averageRevenue(drivers)).to.equal(3700);
-    });
-  });
+  //
+  // describe('totalRevenue()', function () {
+  //   it('uses the reduce() method to sum the revenue of every driver and return the total', function () {
+  //     expect(totalRevenue(drivers)).to.equal(18500);
+  //   });
+  // });
+  //
+  // describe('averageRevenue()', function () {
+  //   it('calculates the average revenue across all drivers', function () {
+  //     expect(averageRevenue(drivers)).to.equal(3700);
+  //   });
+  // });
 });
